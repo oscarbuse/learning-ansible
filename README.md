@@ -5,7 +5,7 @@
 1. hostname: ans1: host with the ansible code
 1. hostname ans2: target host.
    1. this host is made "ansible ready" (with the role "make-ansible-ready")
-   1. is hardened (with the role "hardening")
+   1. gets some basic hardening (with the role "hardening")
    1. gets apache (with the role "geerlingguy.apache")
    1. acts as a simple example with basic authentication to demonstrate ansible vault (with the role web-config)
 
