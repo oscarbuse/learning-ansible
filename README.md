@@ -28,6 +28,10 @@ Get the requirements:
 ```
   harry@ans1:~/ansible$ ansible-galaxy install -r requirements.yml
 ```
+Set the servername to "ans2" in the vhost config in the role geerlingguy.apache:
+```
+  harry@ans1:~/ansible$ sed -i 's/local.dev/ans2/' roles/geerlingguy.apache/defaults/main.yml
+```
 Make the target host (ans2) ready for ansible (with ansible..))
 ```
   harry@ans1:~/ansible$ ansible-playbook -vv -i hosts.inv -k -u vagrant plays/includes/make-ansible-ready.yml
