@@ -28,12 +28,13 @@ Get the requirements:
 ```
   harry@ans1:~/ansible$ ansible-galaxy install -r requirements.yml
 ```
-Run the ansible plays:
+Make the target host (ans2) ready for ansible (with ansible..))
 ```
   harry@ans1:~/ansible$ ansible-playbook -vv -i hosts.inv -k -u vagrant plays/includes/make-ansible-ready.yml
 ```
 (the vagrant user password is "vagrant").
-One the role "make-ansible-ready" has run we can run the rest of the plays as user harry
+
+Once the role "make-ansible-ready" has run we can run the rest of the plays as user harry:
 ```
   harry@ans1:~/ansible$ ansible-playbook -i hosts.inv -l www1 plays/deploy.yml
 ```
