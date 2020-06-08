@@ -20,7 +20,7 @@ vagrant@ans1:~$ sudo su - harry
 ```
 (harry is the "ansible user and can login without password later on ans2)
 
-Change dir to ansbile
+Change dir to ansible
 ```
 harry@ans1:~$ cd ansbile
 ```
