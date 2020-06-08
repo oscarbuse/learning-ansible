@@ -11,9 +11,8 @@ apt install -y lynx
 echo "192.168.66.62 ans2" >> /etc/hosts
 if [ ! -d /home/harry ];then
   useradd -m -s /bin/bash harry
+  sudo -u harry ssh-keygen -b 2048 -t rsa -f /home/harry/.ssh/id_rsa -q -N ""
 fi
-rm -rf /home/harry/.ssh
-sudo -u harry ssh-keygen -b 2048 -t rsa -f /home/harry/.ssh/id_rsa -q -N ""
 if [ -d /home/harry/ansible ];then
   rm -rf /home/harry/ansible
 fi
