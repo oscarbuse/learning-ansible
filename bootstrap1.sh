@@ -7,6 +7,7 @@ apt -y update
 apt -y dist-upgrade
 apt install -y ansible
 apt install -y python3-distutils
+apt install -y jq
 apt install -y sshpass
 apt install -y lynx
 echo "192.168.66.62 ans2" >> /etc/hosts
